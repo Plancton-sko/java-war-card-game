@@ -15,10 +15,6 @@ public class Main {
         Player player1 = new Player(name1, deck.getDeck1());
         Player player2 = new Player(name2, deck.getDeck2());
 
-        player1.showHand();
-        player2.showHand();
-
-
         scanner.close();
 
     }
