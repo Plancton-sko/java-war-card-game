@@ -49,7 +49,6 @@ public class Decks {
         }
     }
 
-
     public ArrayList<Card> getCards() {
         return deck;
     }
@@ -72,6 +71,5 @@ public class Decks {
     public ArrayList<Card> getDeck2() {
         return deck2;
     }
-
 
 }
