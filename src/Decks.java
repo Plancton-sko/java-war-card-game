@@ -1,3 +1,4 @@
+//src/Decks.java
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -6,6 +7,7 @@ import java.util.Collections;
 public class Decks {
     ArrayList<Card> deck1;
     ArrayList<Card> deck2;
+    ArrayList<Card> table;
 
 
     String[] Suits = {"Ouros", "Copas", "Espadas", "Páus"};
@@ -63,6 +65,8 @@ public class Decks {
         deck1 = new ArrayList<>(deck.subList(0, splitPoint));
 
         deck2 = new ArrayList<>(deck.subList(splitPoint, deck.size()));
+
+        table = new ArrayList<>();
     }
 
     public ArrayList<Card> getDeck1() {
@@ -70,6 +74,10 @@ public class Decks {
     }
     public ArrayList<Card> getDeck2() {
         return deck2;
+    }
+
+    public ArrayList<Card> getDeckTable() {
+        return table;
     }
 
 }

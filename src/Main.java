@@ -1,3 +1,4 @@
+//src/Main.java
 import java.util.Scanner;
 
 public class Main {
@@ -19,9 +20,3 @@ public class Main {
 
     }
 }
-
-//       #TODO: create the combat - put the first card of each on the table - after compare it - find winner - if equal - war - new card is open - winner wins tree cards - if equal repeat
-
-
-
-

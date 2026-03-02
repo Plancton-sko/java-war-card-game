@@ -1,3 +1,4 @@
+//src/Player.java
 import java.util.ArrayList;
 
 public class Player {
@@ -15,5 +16,9 @@ public class Player {
         for (Card card : hand) {
             System.out.println(card.getName());
         }
+    }
+
+    public void playCard() {
+
     }
 }
