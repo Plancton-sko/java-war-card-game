@@ -1,11 +1,12 @@
 //src/Player.java
+
 import java.util.ArrayList;
 
 public class Player {
     private ArrayList<Card> hand;
     String name;
 
-    public Player(String name, ArrayList<Card> cards){
+    public Player(String name, ArrayList<Card> cards) {
         this.name = name;
         this.hand = cards;
     }
@@ -18,7 +19,25 @@ public class Player {
         }
     }
 
-    public void playCard() {
+    public Card playCard() {
+        if (hand.size() > 0) {
+            Card playedCard = hand.remove(0);
 
+            return playedCard;
+        }
+        return null;
+    }
+    public ArrayList<Card> playWar() {
+        if (hand.size() > 2) {
+            Card playedBet = hand.remove(0);
+            Card newPlayedCard = hand.remove(0);
+
+            ArrayList<Card> bet = new ArrayList<Card>();
+            bet.add(playedBet);
+            bet.add(newPlayedCard);
+
+            return bet;
+        }
+        return null;
     }
 }
