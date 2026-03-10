@@ -10,6 +10,7 @@ public class Card {
         this.value = value;
     }
 
+
     public String getName() {
         return name;
     }

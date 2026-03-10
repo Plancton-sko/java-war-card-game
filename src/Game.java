@@ -30,9 +30,9 @@ public class Game {
         if (result.equals("war")){
             handleWar();
         }; if (result.equals("Player 1 wins")){
-            // Juntar a player1 hand com a table
+
         }; if (result.equals("Player 2 wins")){
-            // Juntar a player2 hand com a table
+
         }
 
     }
@@ -87,6 +87,4 @@ public class Game {
             result = "Player 2 wins";
         }
     }
-
-//    #TODO: if equal repeat
 }
