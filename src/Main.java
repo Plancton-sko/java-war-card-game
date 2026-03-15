@@ -13,8 +13,6 @@ public class Main {
         System.out.print("Nome do segundo jogador: ");
         String name2= scanner.nextLine();
 
-        Player player1 = new Player(name1, deck.getDeck1());
-        Player player2 = new Player(name2, deck.getDeck2());
 
         scanner.close();
 

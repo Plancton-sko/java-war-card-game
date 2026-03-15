@@ -27,6 +27,7 @@ public class Player {
         }
         return null;
     }
+
     public ArrayList<Card> playWar() {
         if (hand.size() > 2) {
             Card playedBet = hand.remove(0);
