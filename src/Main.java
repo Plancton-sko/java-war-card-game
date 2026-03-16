@@ -1,4 +1,5 @@
 //src/Main.java
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -13,9 +14,13 @@ public class Main {
         System.out.print("Nome do segundo jogador: ");
         String name2= scanner.nextLine();
 
-
         scanner.close();
 
+        Player p1 = new Player(name1, new ArrayList<>(deck.getDeck1()));
+        Player p2 = new Player(name2, new ArrayList<>(deck.getDeck2()));
+
+        Game game = new Game(p1, p2);
+        game.playGame();
 
         };
 

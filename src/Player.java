@@ -20,10 +20,8 @@ public class Player {
     }
 
     public Card playCard() {
-        if (hand.size() > 0) {
-            Card playedCard = hand.remove(0);
-
-            return playedCard;
+        if (!hand.isEmpty()) {
+            return hand.remove(0);
         }
         return null;
     }
@@ -47,6 +45,6 @@ public class Player {
     }
 
     public void getTable(ArrayList<Card> cards) {
-        hand.addAll();
+        hand.addAll(cards);
     }
 }

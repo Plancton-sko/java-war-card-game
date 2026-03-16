@@ -16,13 +16,9 @@ public class Game {
         NONE, P1_WIN, P2_WIN, WAR, DRAW
     }
 
-    ;
-
     public enum GameResult {
         P1_WIN, P2_WIN, DRAW, NONE
     }
-
-    ;
 
     private enum State {
         BOTH_NULL, P1_EMPTY, P2_EMPTY, CONTINUE
