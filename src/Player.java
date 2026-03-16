@@ -29,7 +29,7 @@ public class Player {
     }
 
     public ArrayList<Card> playWar() {
-        if (hand.size() > 2) {
+        if (hand.size() >= 2) {
             Card playedBet = hand.remove(0);
             Card newPlayedCard = hand.remove(0);
 
@@ -40,5 +40,13 @@ public class Player {
             return bet;
         }
         return null;
+    }
+
+    public int cardCount() {
+        return hand.size();
+    }
+
+    public void getTable(ArrayList<Card> cards) {
+        hand.addAll();
     }
 }
