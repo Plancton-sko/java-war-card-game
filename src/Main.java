@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        Decks deck = new Decks();
+        Decks decks = new Decks();
 
         System.out.print("Nome do primeiro jogador: ");
         String name1 = scanner.nextLine();
@@ -16,12 +16,14 @@ public class Main {
 
         scanner.close();
 
-        Player p1 = new Player(name1, new ArrayList<>(deck.getDeck1()));
-        Player p2 = new Player(name2, new ArrayList<>(deck.getDeck2()));
+        Player p1 = new Player(name1, decks.getDeck1());
+        Player p2 = new Player(name2, decks.getDeck2());
 
         Game game = new Game(p1, p2);
         game.playGame();
 
+
+        System.out.println("Resultado final: " + game.getGameResult());
         };
 
     }

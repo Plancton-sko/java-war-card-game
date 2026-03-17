@@ -1,14 +1,15 @@
 //src/Player.java
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Player {
-    private ArrayList<Card> hand;
-    String name;
+    private final List<Card> hand;
+    private final String name;
 
-    public Player(String name, ArrayList<Card> cards) {
+    public Player(String name, List<Card> cards) {
         this.name = name;
-        this.hand = cards;
+        this.hand = new ArrayList<>(cards);
     }
 
     public void showHand() {
@@ -20,10 +21,7 @@ public class Player {
     }
 
     public Card playCard() {
-        if (!hand.isEmpty()) {
-            return hand.remove(0);
-        }
-        return null;
+        return hand.isEmpty() ? null : hand.remove(0);
     }
 
     public ArrayList<Card> playWar() {
@@ -45,6 +43,11 @@ public class Player {
     }
 
     public void getTable(ArrayList<Card> cards) {
-        hand.addAll(cards);
+        hand.addAll(new ArrayList<>(cards));
+    }
+
+    @Override
+    public String toString() {
+        return name + " (" + hand.size() + " cards)";
     }
 }
