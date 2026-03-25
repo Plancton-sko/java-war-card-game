@@ -181,6 +181,13 @@ public class Game {
         }
     }
 
+    public class GameLogger {
+        public void logRound(Player p1, Card c1, Player p2, Card c2) {
+            System.out.println(p1 + " jogou " + c1.getName());
+            System.out.println(p2 + " jogou " + c2.getName());
+        }
+    }
+
     public RoundResult getRoundResult() {
         return roundResult;
     }
