@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
+    
     private final List<Card> hand;
     private final String name;
 
@@ -24,6 +25,7 @@ public class Player {
     }
 
     public ArrayList<Card> playWar() {
+        
         if (hand.size() >= 2) {
             Card playedBet = hand.remove(0);
             Card newPlayedCard = hand.remove(0);
