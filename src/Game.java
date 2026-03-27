@@ -67,7 +67,6 @@ public class Game {
 
         roundResult = findWinner(card1, card2);
 
-
         if (roundResult == RoundResult.WAR) {
             handleWar();
             return;
@@ -168,10 +167,11 @@ public class Game {
     }
 
     private void checkGameWinner() {
+        
         if (gameResult != GameResult.NONE) {
             return;
         }
-
+        
         if (player1.cardCount() == 0 && player2.cardCount() == 0) {
             gameResult = GameResult.DRAW;
         } else if (player1.cardCount() == 0) {
