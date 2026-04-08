@@ -1,29 +1,35 @@
-//src/Main.java
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
 
-        Decks decks = new Decks();
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
 
-        System.out.print("Nome do primeiro jogador: ");
-        String name1 = scanner.nextLine();
+            Decks decks = new Decks();
 
-        System.out.print("Nome do segundo jogador: ");
-        String name2= scanner.nextLine();
+            String name1 = readPlayerName(scanner, "primeiro");
+            String name2 = readPlayerName(scanner, "segundo");
 
-        scanner.close();
+            Player player1 = new Player(name1, decks.getDeck1());
+            Player player2 = new Player(name2, decks.getDeck2());
 
-        Player p1 = new Player(name1, decks.getDeck1());
-        Player p2 = new Player(name2, decks.getDeck2());
+            Game game = new Game(player1, player2);
 
-        Game game = new Game(p1, p2);
-        game.playGame();
-
-
-        System.out.println("Resultado final: " + game.getGameResult());
-        };
-
+            startGame(game);
+        }
     }
 
+    private static String readPlayerName(Scanner scanner, String position) {
+        System.out.print("Nome do " + position + " jogador: ");
+        return scanner.nextLine().trim();
+    }
+
+    private static void startGame(Game game) {
+        System.out.println("\nIniciando o jogo...\n");
+
+        game.playGame();
+
+        System.out.println("\n=== Resultado Final ===");
+        System.out.println(game.getGameResult());
+    }
+}
