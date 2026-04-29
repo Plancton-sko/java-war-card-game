@@ -20,16 +20,20 @@ public class Main {
     }
 
     private static String readPlayerName(Scanner scanner, String position) {
+        
         System.out.print("Nome do " + position + " jogador: ");
         return scanner.nextLine().trim();
+        
     }
 
     private static void startGame(Game game) {
+        
         System.out.println("\nIniciando o jogo...\n");
 
         game.playGame();
 
         System.out.println("\n=== Resultado Final ===");
         System.out.println(game.getGameResult());
+        
     }
 }
